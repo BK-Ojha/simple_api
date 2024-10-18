@@ -20,7 +20,7 @@ app.use(cors())
 app.use('/api', route)
 
 // Define the PORT
-const PORT = process.env.PORT || 7000
+const PORT = process.env.PORT || 3000
 
 // Start the server
 app.listen(PORT, () => {

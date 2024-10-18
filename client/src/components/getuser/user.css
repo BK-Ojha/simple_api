@@ -5,16 +5,24 @@
     border-radius: 5px;
     margin: 50px auto;
     padding: 50;
+    transition: transform 0.5s ease;
+}
+.userTable:hover{
+    transform: scale(1.02);
 }
 
 .addButton{
     text-decoration: none;
-    background-color: purple;
+    background-color: blue;
     color: white;
     font-weight: 500;
     box-shadow: 1px 1px 8px rgba(0,0,0, 0.065);
     border-radius: 5px;
     padding: 10px;
+    transition: background-color 0.3s ease;
+}
+.addButton:hover{
+    background-color: rgba(77, 9, 52, 0.869);
 }
 
 .userTable table{
@@ -24,7 +32,7 @@
 }
 
 .userTable table thead th{
-    background-color: darkblue;
+    background-color: rgb(13, 133, 125);
     color: white;
     padding: 10px;
 }
@@ -42,13 +50,22 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.actionButtons button:hover{
+    transform: scale(1.2);
 }
 
 .actionButtons a{
-    background-color: green;
+    background-color: blueviolet;
     padding: 6px 10px;
     color: white;
     border-radius: 5px;
     margin: 0px 10px;
     text-decoration: none;
+    /* transition: transform 0.3s ease; */
+}
+
+.actionButtons a:hover{
+    transform: scale(1.2); 
 }

@@ -13,14 +13,14 @@ const User = () => {
   // To fetch info of user
   useEffect(()=>{
     const fetchData = async() => {
-        const response=await axios.get("http://localhost:7000/api/getall", fetchData)
+        const response=await axios.get("http://localhost:3000/api/getall", fetchData)
         setUsers(response.data)
     }
     fetchData();
   },[id])
 
   const deleteUser = async(userId) => {
-    await axios.delete(`http://localhost:7000/api/delete/${userId}`)
+    await axios.delete(`http://localhost:3000/api/delete/${userId}`)
     .then((response) => {
       // Used to also delete data from state
       setUsers((prevUser) => prevUser.filter((user) => user._id !==userId))
@@ -51,7 +51,7 @@ const User = () => {
                 <tr key={user._id}>
                     <td>{index +1} </td>
                     <td>{user.fname} {user.lname}</td>
-                    <td>{user.email}</td>
+                    <td style={{cursor:"pointer"}} >{user.email}</td>
                     <td className='actionButtons'>
                         <button onClick={() => deleteUser(user._id)} ><i className="fa-solid fa-trash"></i></button>
                         {/* Updation using a particular user by given its ID */}

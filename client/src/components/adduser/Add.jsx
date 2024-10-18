@@ -26,41 +26,26 @@ const navigate = useNavigate();
     setUser({...user, [name]: value});
   }
 
-// // Connection of frontend with backend
-//   const submitForm = async(e) => {
-//     e.preventDefault();
+// Connection of frontend with backend
+  const submitForm = async(e) => {
+    e.preventDefault();
 
-//     // Here, axios helps to communicate with the APIs or axios send http request ot backend
-//     // passing API with user's data that wants to send
-//     await axios.post("http://localhost:7000/api/create",user)
-//     .then((response) => {
-//       console.log(response)
-//       toast.success(response.data.msg, {position:"top-right"})
-//       navigate("/")
-//     })
-//     .catch(error => console.log(error))
-//   }
-
-const submitForm = async(e) => {
-  e.preventDefault();
-  try{
-    const response = await axios.post("http://localhost:7000/api/create",user)
-    console.log(response)
-    // Any kinds of responses generated at the given position
-    toast.success(response.data.msg, {position:"top-right"})
-    // After successfully created, it helps to jump into the home page
-    navigate("/")
-
-  }catch(err){
-    console.log(err)
+    // Here, axios helps to communicate with the APIs or axios send http request ot backend
+    // passing API with user's data that wants to send
+    await axios.post("http://localhost:3000/api/create",user)
+    .then((response) => {
+      console.log(response)
+      toast.success(response.data.msg, {position:"top-right"})
+      navigate("/")
+    })
+    .catch(error => console.log(error))
   }
-}
-  
+
 
   return (
     <div className='addUser'>
       <Link to={'/'}>Back</Link>
-      <h3>Add new user</h3>
+      <h3 >Add new user</h3>
       <form className='addUserForm' onSubmit={submitForm}>
         <div className='inputGroup'>
           <label htmlFor="fname">First Name</label>
