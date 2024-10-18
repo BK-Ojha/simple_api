@@ -3,10 +3,13 @@ API (Application Programming Interface) is a set of rules and protocols that all
 
 ## Screenshots
 
+### Adding new user
 ![Adding new user](client/public/screenshots/addnewuser.png)
 
+### Update user's details
 ![Update user's details](client/public/screenshots/updateuser.png)
 
+### Lists of users
 ![Lists of users](client/public/screenshots/userlists.png)
 
 ### Description 
