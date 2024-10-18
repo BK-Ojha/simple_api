@@ -3,14 +3,11 @@ API (Application Programming Interface) is a set of rules and protocols that all
 
 ## Screenshots
 
-![Adding new user]
-(client/public/screenshots/addnewuser.png)
+![Adding new user](client/public/screenshots/addnewuser.png)
 
-![Update user's details]
-(client/public/screenshots/updateuser.png)
+![Update user's details](client/public/screenshots/updateuser.png)
 
-![Lists of users]
-(client/public/screenshots/userlists.png)
+![Lists of users](client/public/screenshots/userlists.png)
 
 ### Description 
     I used crud operations for this api. They include : 
